@@ -22,7 +22,7 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools-scm >=6,!=7.0.0,!=7.0.1,!=7.0.2
+    - setuptools-scm >=7.0.5
   run:
     - python >=3.6
 
@@ -40,6 +40,7 @@ about:
   summary: Proxy Server, Web Server, PubSub, Work acceptor & executor framework.
   license: BSD-3-Clause
   license_file: LICENSE
+  doc_url: https://proxypy.readthedocs.io
 
 extra:
   recipe-maintainers:
