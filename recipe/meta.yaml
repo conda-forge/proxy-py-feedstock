@@ -1,12 +1,12 @@
-{% set version = "2.4.3" %}
+{% set version = "2.4.4" %}
 
 package:
   name: proxy-py
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/proxy.py/proxy.py-{{ version }}.tar.gz
-  sha256: 6134e8f1282db1fd7fa1a4b7049e49307566851023b2ac312d9dd36e92f0c9b1
+  url: https://pypi.io/packages/source/p/proxy.py/proxy_py-{{ version }}.tar.gz
+  sha256: 216581f70ad673f4ecb5f6b27f52491aaf1c056829f4a670f5ea3b5a340f4272
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools-scm >=6,!=7.0.0,!=7.0.1,!=7.0.2
+    - setuptools-scm >=7.0.5
   run:
     - python >=3.6
 
@@ -40,6 +40,7 @@ about:
   summary: Proxy Server, Web Server, PubSub, Work acceptor & executor framework.
   license: BSD-3-Clause
   license_file: LICENSE
+  doc_url: https://proxypy.readthedocs.io
 
 extra:
   recipe-maintainers:
