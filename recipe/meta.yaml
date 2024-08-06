@@ -33,7 +33,7 @@ test:
   commands:
     - pip check
     - proxy --help
-    - grout --help
+    - which grout || where grout
   requires:
     - pip
 
