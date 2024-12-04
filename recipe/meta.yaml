@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/proxy.py/proxy_py-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/proxy.py/proxy_py-{{ version }}.tar.gz
   sha256: 98676034f94615097bcbe383de65e20a7a2bed74431ffdfd073ece76f3d6e366
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   entry_points:
     - proxy = proxy:entry_point
     - grout = proxy:grout
@@ -22,11 +22,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm >=7.0.5
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -37,6 +37,7 @@ test:
     - which grout || where grout
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/abhinavsingh/proxy.py
