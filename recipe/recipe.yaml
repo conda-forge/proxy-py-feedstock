@@ -19,7 +19,8 @@ build:
     env:
       PYTHONIOENCODING: utf-8
       PYTHONLEGACYTEXTENCODING: utf-8
-    content: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    content:
+      - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
       - proxy = proxy:entry_point
