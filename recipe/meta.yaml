@@ -1,4 +1,4 @@
-{% set version = "2.4.9" %}
+{% set version = "2.4.10" %}
 
 package:
   name: proxy-py
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/proxy.py/proxy_py-{{ version }}.tar.gz
-  sha256: 98676034f94615097bcbe383de65e20a7a2bed74431ffdfd073ece76f3d6e366
+  sha256: 41b9e9d3aae6f80e2304d3726e8e9c583a510d8de224eada53d115f48a63a9ce
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   entry_points:
     - proxy = proxy:entry_point
     - grout = proxy:grout
