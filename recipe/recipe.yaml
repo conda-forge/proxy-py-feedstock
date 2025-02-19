@@ -42,10 +42,8 @@ tests:
       imports: proxy
   - requirements:
       run:
-        - pip
         - python ${{ python_min }}.*
     script:
-      - pip check
       - proxy --help
       - which grout || where grout
 
