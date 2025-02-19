@@ -9,7 +9,7 @@ Package license: BSD-3-Clause
 
 Summary: Proxy Server, Web Server, PubSub, Work acceptor & executor framework.
 
-Documentation: https://proxypy.readthedocs.io
+Documentation: https://proxypy.readthedocs.io/
 
 Current build status
 ====================

@@ -32,7 +32,7 @@ requirements:
     - setuptools
     - setuptools-scm >=7.0.5
   run:
-    - python >=${{ python_min }}.*
+    - python >=${{ python_min }}
 
 tests:
   - python:
